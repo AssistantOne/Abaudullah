@@ -6,6 +6,7 @@
     <title>FP&A Solutions - EBITDA Solutions</title>
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -300,6 +301,11 @@
             transform: none;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             min-width: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(100% - 4rem);
         }
 
         .nav-links.mobile-active .dropdown-item {
@@ -309,6 +315,9 @@
             color: var(--text-secondary);
             margin: 0;
             transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            display: block;
         }
 
         .nav-links.mobile-active .dropdown-item:hover {
@@ -324,6 +333,20 @@
             margin-bottom: 0.5rem;
             color: var(--primary-gold);
             font-weight: 700;
+            text-align: center;
+            width: 100%;
+        }
+
+        .nav-links.mobile-active .dropdown-toggle {
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-links.mobile-active .dropdown-toggle::after {
+            margin-left: 0.5rem;
         }
 
                 /* Mobile Navigation */
@@ -352,7 +375,6 @@
                 position: fixed;
                 width: 100%;
             }
-        }
         }
 
         .service-hero {
@@ -468,7 +490,7 @@
         /* Consult Now Button */
         .consult-now-btn {
             background: linear-gradient(135deg, #FFD700, #FFF4A3);
-            color: var(--primary-dark);
+            color: #000000;
             text-decoration: none;
             font-weight: 700;
             font-size: 0.9rem;
@@ -486,15 +508,40 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
             background: linear-gradient(135deg, #FFF4A3, #FFD700);
-            color: var(--primary-dark);
+            color: #000000;
         }
         .consult-now-btn i {
             font-size: 1rem;
         }
         @media (max-width: 768px) {
             .consult-now-btn {
-                display: none;
+                display: flex !important;
+                color: #000000 !important;
+                background: linear-gradient(135deg, #FFD700, #FFF4A3) !important;
+                margin: 1rem 2rem;
+                justify-content: center;
+                text-align: center;
             }
+        }
+
+        /* Ensure consult-now-btn is visible and black on all devices */
+        .consult-now-btn,
+        .consult-now-btn:hover,
+        .consult-now-btn:focus,
+        .consult-now-btn:active {
+            color: #000000 !important;
+        }
+
+        /* Mobile menu consult-now-btn styling */
+        .nav-links.mobile-active .consult-now-btn {
+            display: flex !important;
+            color: #000000 !important;
+            background: linear-gradient(135deg, #FFD700, #FFF4A3) !important;
+            margin: 1rem 2rem;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
         }
 
         
@@ -809,7 +856,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="../../index.html" class="logo">EBITDA Solutions</a>
+            <a href="../../index.html" class="logo">EBITDA Solutions LLP</a>
             <ul class="nav-links">
                 <li class="nav-item"><a href="../../index.html">Home</a></li>
                 <li class="nav-item">
@@ -835,7 +882,7 @@
                 <li class="nav-item"><a href="../../index.html#blog">Blog</a></li>
                 <li class="nav-item"><a href="../../index.html#contact">Contact</a></li>
                 <li class="nav-item">
-                    <a href="https://wa.me/+1234567890?text=Hi%20EBITDA%20Solutions,%20I%20would%20like%20to%20consult%20about%20your%20FP&A%20solutions." class="consult-now-btn" target="_blank">
+                    <a href="https://wa.me/+923116427867?text=Hi%20EBITDA%20Solutions,%20I%20would%20like%20to%20consult%20about%20your%20FP&A%20solutions." class="consult-now-btn" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                         Consult Now
                     </a>

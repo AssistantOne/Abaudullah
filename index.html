@@ -201,7 +201,7 @@
         /* Consult Now Button */
         .consult-now-btn {
             background: linear-gradient(135deg, #FFD700, #FFF4A3);
-            color: var(--primary-dark);
+            color: #000000;
             text-decoration: none;
             font-weight: 700;
             font-size: 0.9rem;
@@ -220,11 +220,31 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
             background: linear-gradient(135deg, #FFF4A3, #FFD700);
-            color: var(--primary-dark);
+            color: #000000;
         }
 
         .consult-now-btn i {
             font-size: 1rem;
+        }
+
+        /* Ensure consult-now-btn is visible and black on all devices */
+        .consult-now-btn,
+        .consult-now-btn:hover,
+        .consult-now-btn:focus,
+        .consult-now-btn:active {
+            color: #000000 !important;
+        }
+
+        /* Mobile menu consult-now-btn styling */
+        .nav-links.mobile-active .consult-now-btn {
+            display: flex !important;
+            color: #000000 !important;
+            background: linear-gradient(135deg, #FFD700, #FFF4A3) !important;
+            margin: 1rem 2rem;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
         }
 
         /* Dropdown Styles */
@@ -1731,7 +1751,12 @@
             }
 
             .consult-now-btn {
-                display: none;
+                display: flex !important;
+                color: #000000 !important;
+                background: linear-gradient(135deg, #FFD700, #FFF4A3) !important;
+                margin: 1rem 2rem;
+                justify-content: center;
+                text-align: center;
             }
         }
 
@@ -1742,14 +1767,20 @@
             .nav-container {
                 padding: 0 1rem;
                 flex-direction: row;
-                gap: 1rem;
+                gap: 0.5rem;
                 justify-content: space-between;
                 align-items: center;
+                flex-wrap: nowrap;
             }
 
             .logo {
-                font-size: 1.4rem;
-                flex-shrink: 0;
+                font-size: 1.2rem;
+                flex-shrink: 1;
+                min-width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: calc(100vw - 80px);
             }
 
             .nav-links {
@@ -1759,6 +1790,7 @@
             .mobile-menu {
                 display: flex;
                 flex-shrink: 0;
+                margin-left: auto;
             }
 
             .dropdown-menu {
@@ -1786,20 +1818,38 @@
             }
         }
 
-        /* Base Mobile Styles (320px and up) */
-        @media (max-width: 480px) {
+        /* Extra small screens */
+        @media (max-width: 360px) {
             .nav-container {
-                padding: 0 1rem;
+                padding: 0 0.5rem;
             }
 
             .logo {
-                font-size: 1.2rem;
+                font-size: 0.9rem;
+                max-width: calc(100vw - 60px);
+            }
+
+            .mobile-menu {
+                padding: 0.3rem;
+            }
+        }
+
+        /* Base Mobile Styles (320px and up) */
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 0.8rem;
+                gap: 0.3rem;
+            }
+
+            .logo {
+                font-size: 1rem;
+                max-width: calc(100vw - 70px);
             }
 
             .logo::before {
-                left: -8px;
+                left: -6px;
                 width: 2px;
-                height: 18px;
+                height: 16px;
             }
 
             .hero {
@@ -2850,7 +2900,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">EBITDA Solutions</a>
+            <a href="index.html" class="logo">EBITDA Solutions LLP</a>
             <ul class="nav-links">
                 <li class="nav-item"><a href="index.html">Home</a></li>
                 <li class="nav-item">
@@ -2876,7 +2926,7 @@
                 <li class="nav-item"><a href="#blog">Blog</a></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
                 <li class="nav-item">
-                    <a href="https://wa.me/+1234567890?text=Hi%20EBITDA%20Solutions,%20I%20would%20like%20to%20consult%20about%20your%20services." class="consult-now-btn" target="_blank">
+                    <a href="https://wa.me/+923116427867?text=Hi%20EBITDA%20Solutions,%20I%20would%20like%20to%20consult%20about%20your%20services." class="consult-now-btn" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                         Consult Now
                     </a>
@@ -3063,7 +3113,7 @@
         </div>
         <div class="about-content">
             <div class="about-text">
-                <h3>Transforming Businesses Since 1999</h3>
+                <h3>Transforming Businesses Since 2020</h3>
                 <p>EBITDA Solutions stands at the forefront of business transformation, delivering exceptional results through innovative strategies and deep industry expertise. Our commitment to excellence has made us the trusted partner for businesses seeking sustainable growth and market leadership.</p>
                 <p>We combine cutting-edge analytics, proven methodologies, and personalized approaches to unlock your business potential and drive unprecedented success in today's competitive landscape.</p>
             </div>
